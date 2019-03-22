@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1971.0, 276.0, 696.0, 602.0 ],
+		"rect" : [ 531.0, 96.0, 754.0, 739.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,50 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 400.0, 25.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 428.0, 24.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "scan for new ports"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 396.5, 368.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "send value when controller 73 is sent"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-62",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 355.0, 55.0, 20.0 ],
+					"patching_rect" : [ 198.0, 355.0, 68.0, 20.0 ],
 					"style" : "",
-					"text" : "volume"
+					"text" : "amplitude"
 				}
 
 			}
@@ -297,7 +334,7 @@
 									"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 268.0, 243.0, 360.0, 155.0 ],
-									"setfilter" : [ 0, 1, 1, 0, 0, 92.498604, 1.747897, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+									"setfilter" : [ 0, 1, 1, 0, 0, 1760.0, 1.747897, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
 									"style" : "",
 									"varname" : "filtergraph~"
 								}
@@ -812,7 +849,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 409.5, 166.0, 137.0, 22.0 ],
 					"style" : "",
-					"text" : "midievent 176 73 42"
+					"text" : "midievent 128 69 0"
 				}
 
 			}
@@ -838,7 +875,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 239.0, 37.0, 55.0, 23.0 ],
+					"patching_rect" : [ 239.0, 51.0, 55.0, 23.0 ],
 					"style" : "",
 					"text" : "midiinfo"
 				}
@@ -847,13 +884,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"items" : [ "X-Station", ",", "to Max 1", ",", "to Max 2" ],
+					"items" : [ "to Max 1", ",", "to Max 2", ",", "X-Station", ",", "Teensy MIDI" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 239.0, 90.0, 150.0, 22.0 ],
+					"patching_rect" : [ 239.0, 91.0, 150.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -956,6 +993,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"source" : [ "obj-22", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 1 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1836.0, 202.0, 948.0, 715.0 ],
+		"rect" : [ 188.0, 127.0, 1298.0, 877.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 14.0, 210.0, 150.0, 60.0 ],
+					"style" : "",
+					"text" : "When note is pressed automatically turn on sound then off after delay amount"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -53,7 +66,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 2184.0, 355.0, 842.0, 498.0 ],
+						"rect" : [ 1044.0, 355.0, 842.0, 498.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,

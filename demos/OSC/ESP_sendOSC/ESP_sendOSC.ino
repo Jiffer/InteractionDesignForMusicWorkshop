@@ -21,13 +21,14 @@
 char ssid[] = "things";          // your network SSID (name)
 char pass[] = "connected";                    // your network password
 
-WiFiUDP Udp;                                // A UDP instance to let us send and receive packets over UDP
-const IPAddress outIp(10,0,1,11);  // check ME!      // remote IP of your computer
+WiFiUDP Udp;              //10.38.43.211                  // A UDP instance to let us send and receive packets over UDP
+const IPAddress outIp(10,0,1,2);  // check ME!      // remote IP of your computer
 const unsigned int outPort = 9999;          // remote port to receive OSC
 const unsigned int localPort = 8888;        // local port to listen for OSC packets (actually not used for sending)
 
 // globals to keep track of input values
 int analogInput = 0;
+int analogInput2 = 0;
 int digitalInput = 0;
 
 void setup() {
@@ -72,6 +73,16 @@ void loop() {
     Udp.endPacket();
     msg.empty();
   }
+  if (analogInput2 != analogRead(A0)){
+    analogInput2 = analogRead(A0);
+    OSCMessage msg("/inputs/a0");
+    msg.add(analogInput2);
+    Udp.beginPacket(outIp, outPort);
+    msg.send(Udp);
+    Udp.endPacket();
+    msg.empty();
+  }
+  
   if (digitalInput != digitalRead(14)){
     digitalInput = digitalRead(14);
     OSCMessage msg("/inputs/d0");

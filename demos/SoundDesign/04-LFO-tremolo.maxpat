@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2143.0, 200.0, 640.0, 683.0 ],
+		"rect" : [ 703.0, 79.0, 640.0, 683.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -354,7 +354,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 137.0, 352.0, 161.0, 22.0 ],
+					"patching_rect" : [ 137.0, 352.0, 180.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -364,7 +364,7 @@
 					}
 ,
 					"style" : "",
-					"text" : "p"
+					"text" : "p volumeTremolo"
 				}
 
 			}
